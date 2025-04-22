@@ -22,24 +22,6 @@ body {
   line-height: 1.6;
 }
 
-.header {
-  background-color: white;
-  padding: 15px 0;
-  box-shadow: var(--shadow);
-  position: sticky;
-  top: 0;
-  z-index: 100;
-}
-
-.header-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
 .logo {
   display: flex;
   align-items: center;
