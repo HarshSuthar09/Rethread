@@ -40,10 +40,10 @@ def aboutus():
 def faq():
     return render_template('faq.html')
 
-@app.route('/productfull')
+@app.route('/item')
 @login_required
-def productfull():
-    return render_template('productfull.html')
+def item():
+    return render_template('item.html')
 
 @app.route('/contact')
 def contact():
@@ -77,7 +77,7 @@ def login():
         if user:
             if check_password_hash(user.password, form.password.data):
                 login_user(user, remember=form.remember.data)
-                return redirect(url_for('productfull'))
+                return redirect(url_for('item'))
 
         return '<h1>Invalid username or password</h1>'
         #return '<h1>' + form.username.data + ' ' + form.password.data + '</h1>'

@@ -30,9 +30,9 @@ def index3():
 def index4():
     return render_template('login.html')
 
-@app.route('/productfull')
+@app.route('/item')
 def index5():
-    return render_template('productfull.html')
+    return render_template('item.html')
 
 @app.route('/contact')
 def index6():

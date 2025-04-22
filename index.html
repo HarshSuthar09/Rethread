@@ -1,297 +1,528 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rethread - Your E-Waste Friend</title>
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="navbar.css" />
+    <link rel="stylesheet" href="footer.css" />
+    <link rel="icon" href="Images/logo.png" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Header will be included from navbar.html -->
+    <header class="header">
+      <div class="left">
+        <a href="index.html" class="logo-link">
+          <!-- <img src="Images/logo.png" alt="Rethread Logo" /> -->
+          <h1>RETHREAD</h1>
+        </a>
+      </div>
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Rethread-your ewaste friend </title>
-        <link rel="stylesheet" href="index.css">
-        <link rel="stylesheet" href="navbar.css">
+      <div class="mid">
+        <nav>
+          <ul class="navbar">
+            <li>
+              <a href="index.html" class="active">
+                <i class="fas fa-home"></i>
+                <span>Home</span>
+              </a>
+            </li>
+            <li>
+              <a href="aboutus.html">
+                <i class="fas fa-info-circle"></i>
+                <span>About Us</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="products.html">
+                <i class="fas fa-shopping-bag"></i>
+                <span>Products</span>
+              </a>
+            </li>
+            <li>
+              <a href="faq.html">
+                <i class="fas fa-question-circle"></i>
+                <span>FAQs</span>
+              </a>
+            </li>
+            <li>
+              <a href="contact.html">
+                <i class="fas fa-envelope"></i>
+                <span>Contact</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
 
-        <link rel="icon" href="Images/logo.png" type="image/x-icon">
-
-    </head>
-
-    <body>
-        <header class="header">
-            <div class="left">
-                <img src="Images/logo.png" alt="logo"> 
-                
-            </div>
-            <div class="mid">
-                <ul class="navbar">
-                    <li><a href="index.html">HOME</a></li>
-                    <li><a href="aboutus.html">ABOUT US</a></li>
-                    <li><a href="faq.html">FAQs</a></li>
-                    <li><a href="contact.html">CONTACT US</a></li>
-                    <li><a href="sell.html">PRODUCT</a></li>
-                </ul>
-                <div class="dropdown">
-                    <button class="dropbtn">Main Menu</button>
-                    <div class="dropdown-content">
-                        <a href="index.html">HOME</a>
-                        <a href="aboutus.html">ABOUT US</a>
-                        <a href="faq.html">FAQs</a>
-                        <a href="contact.html">CONTACT US</a>
-                        <li><a href="sell.html">PRODUCT</a></li>
-                    </div>
-                </div>
-            </div>
-            <div class="right">
-                <button class="btn"><a
-                        href="login.html">Register/Login</a></button>
-            </div>
-        </header>
-
-        
-
-        <div class="title">
-            Sell Your E-waste Now, And Start Earning From It.
+        <div class="dropdown">
+          <button
+            class="dropbtn"
+            aria-expanded="false"
+            aria-controls="dropdown-content"
+            id="menu-button"
+          >
+            <i class="fas fa-bars"></i>
+            <span>Menu</span>
+          </button>
+          <div class="dropdown-content" id="dropdown-content">
+            <a href="index.html" class="active">
+              <i class="fas fa-home"></i> Home
+            </a>
+            <a href="aboutus.html">
+              <i class="fas fa-info-circle"></i> About Us
+            </a>
+            <a href="services.html">
+              <i class="fas fa-recycle"></i> Services
+            </a>
+            <a href="products.html">
+              <i class="fas fa-shopping-bag"></i> Products
+            </a>
+            <a href="faq.html"> <i class="fas fa-question-circle"></i> FAQs </a>
+            <a href="contact.html"> <i class="fas fa-envelope"></i> Contact </a>
+          </div>
         </div>
+      </div>
 
-        <div class="cont">
-            <div class="pro" id="pro1">
-                <img src="Images/img1.png" alt="Product img" class="img">
-                <div class="imgdesc">
-                    <h2>
-                        Product Type: <a href="url">Laptop</a><br>
-                        Product Brand: <a href="url">Lenovo</a>
-                    </h2>
-                    <a href="productfull.html" target="_blank">
-                        <h4>Click here for more info</h4>
-                    </a>
-                </div>
-            </div>
+      <div class="right">
+        <a href="login.html" class="btn login-btn">
+          <i class="fas fa-sign-in-alt"></i>
+          <span>Login</span>
+        </a>
+        <a href="register.html" class="btn register-btn">
+          <i class="fas fa-user-plus"></i>
+          <span>Register</span>
+        </a>
+      </div>
+    </header>
+    <main class="main-content">
+      <section class="hero-section">
+        <div class="hero-text">
+          <h1>Sell Your E-Waste Now, And Start Earning From It</h1>
+          <p>
+            Get the best value for your old electronics while helping the
+            environment
+          </p>
+        </div>
+      </section>
 
-            <div class="pro" id="pro2">
-                <img src="Images/img2.jpg" alt="Product img" class="img">
-                <div class="imgdesc">
-                    <h2>
-                        Product Type: <a href="url">Headphones</a><br>
-                        Product Brand: <a href="url">Phillips</a>
-                    </h2>
-                    <a href="productfull.html" target="_blank">
-                        <h4>Click here for more info</h4>
-                    </a>
-                </div>
+      <section class="featured-products">
+        <h2>Featured E-Waste Products</h2>
+        <div class="product-grid">
+          <!-- Product 1 -->
+          <div class="product-card">
+            <div class="product-image">
+              <img src="Images/img1.png" alt="Lenovo Laptop" />
+              <div class="product-badge">Popular</div>
             </div>
+            <div class="product-info">
+              <h3>Lenovo Laptop</h3>
+              <div class="product-meta">
+                <span><i class="fas fa-tag"></i> Laptop</span>
+                <span><i class="fas fa-star"></i> 4.5</span>
+              </div>
+              <div class="product-actions">
+                <a href="item.html" class="view-btn"
+                  >View Details <i class="fas fa-info-circle"></i
+                ></a>
+                <button class="price-btn">₹1,200 - ₹1,800</button>
+              </div>
+            </div>
+          </div>
 
-            <div class="pro" id="pro3">
-                <img src="Images/img3.jpg" alt="Product img" class="img">
-                <div class="imgdesc">
-                    <h2>
-                        Product Type: <a href="url">Mobile</a><br>
-                        Product Brand: <a href="url">Samsung</a>
-                    </h2>
-                    <a href="productfull.html" target="_blank">
-                        <h4>Click here for more info</h4>
-                    </a>
-                </div>
+          <!-- Product 2 -->
+          <div class="product-card">
+            <div class="product-image">
+              <img src="Images/img2.jpg" alt="Phillips Headphones" />
             </div>
+            <div class="product-info">
+              <h3>Phillips Headphones</h3>
+              <div class="product-meta">
+                <span><i class="fas fa-tag"></i> Headphones</span>
+                <span><i class="fas fa-star"></i> 4.2</span>
+              </div>
+              <div class="product-actions">
+                <a href="item.html" class="view-btn"
+                  >View Details <i class="fas fa-info-circle"></i
+                ></a>
+                <button class="price-btn">₹300 - ₹500</button>
+              </div>
+            </div>
+          </div>
 
-            <div class="pro" id="pro4">
-                <img src="Images/ups-battery.jpg" alt="Product img" class="img">
-                <div class="imgdesc">
-                    <h2>
-                        Product Type: <a href="url">UPS</a><br>
-                        Product Brand: <a href="url">Others</a>
-                    </h2>
-                    <a href="productfull.html" target="_blank">
-                        <h4>Click here for more info</h4>
-                    </a>
-                </div>
+          <!-- Product 3 -->
+          <div class="product-card">
+            <div class="product-image">
+              <img src="Images/img3.jpg" alt="Samsung Mobile" />
+              <div class="product-badge">New</div>
             </div>
+            <div class="product-info">
+              <h3>Samsung Mobile</h3>
+              <div class="product-meta">
+                <span><i class="fas fa-tag"></i> Mobile</span>
+                <span><i class="fas fa-star"></i> 4.7</span>
+              </div>
+              <div class="product-actions">
+                <a href="item.html" class="view-btn"
+                  >View Details <i class="fas fa-info-circle"></i
+                ></a>
+                <button class="price-btn">₹800 - ₹1,200</button>
+              </div>
+            </div>
+          </div>
 
-            <div class="pro" id="pro5">
-                <img src="Images/battery1.webp" alt="Product img" class="img">
-                <div class="imgdesc">
-                    <h2>
-                        Product Type: <a href="url">Battery</a><br>
-                        Product Brand: <a href="url">APC</a>
-                    </h2>
-                    <a href="productfull.html" target="_blank">
-                        <h4>Click here for more info</h4>
-                    </a>
-                </div>
+          <!-- Product 4 -->
+          <div class="product-card">
+            <div class="product-image">
+              <img src="Images/ups-battery.jpg" alt="UPS Battery" />
             </div>
+            <div class="product-info">
+              <h3>UPS Battery</h3>
+              <div class="product-meta">
+                <span><i class="fas fa-tag"></i> UPS</span>
+                <span><i class="fas fa-star"></i> 4.0</span>
+              </div>
+              <div class="product-actions">
+                <a href="item.html" class="view-btn"
+                  >View Details <i class="fas fa-info-circle"></i
+                ></a>
+                <button class="price-btn">₹400 - ₹600</button>
+              </div>
+            </div>
+          </div>
 
-            <div class="pro" id="pro6">
-                <img src="Images/frige.jpg" alt="Product img" class="img">
-                <div class="imgdesc">
-                    <h2>
-                        Product Type: <a href="url">Fridge</a><br>
-                        Product Brand: <a href="url">L.G.</a>
-                    </h2>
-                    <a href="productfull.html" target="_blank">
-                        <h4>Click here for more info</h4>
-                    </a>
-                </div>
+          <!-- Product 5 -->
+          <div class="product-card">
+            <div class="product-image">
+              <img src="Images/battery1.webp" alt="APC Battery" />
             </div>
+            <div class="product-info">
+              <h3>APC Battery</h3>
+              <div class="product-meta">
+                <span><i class="fas fa-tag"></i> Battery</span>
+                <span><i class="fas fa-star"></i> 3.9</span>
+              </div>
+              <div class="product-actions">
+                <a href="item.html" class="view-btn"
+                  >View Details <i class="fas fa-info-circle"></i
+                ></a>
+                <button class="price-btn">₹350 - ₹550</button>
+              </div>
+            </div>
+          </div>
 
-            <div class="pro" id="pro7">
-                <img src="Images/fridge2.jfif" alt="Product img" class="img">
-                <div class="imgdesc">
-                    <h2>
-                        Product Type: <a href="url">Fridge</a><br>
-                        Product Brand: <a href="url">Whirlpool</a>
-                    </h2>
-                    <a href="productfull.html" target="_blank">
-                        <h4>Click here for more info</h4>
-                    </a>
-                </div>
+          <!-- Product 6 -->
+          <div class="product-card">
+            <div class="product-image">
+              <img src="Images/frige.jpg" alt="LG Fridge" />
+              <div class="product-badge">Best Value</div>
             </div>
+            <div class="product-info">
+              <h3>LG Fridge</h3>
+              <div class="product-meta">
+                <span><i class="fas fa-tag"></i> Fridge</span>
+                <span><i class="fas fa-star"></i> 4.3</span>
+              </div>
+              <div class="product-actions">
+                <a href="item.html" class="view-btn"
+                  >View Details <i class="fas fa-info-circle"></i
+                ></a>
+                <button class="price-btn">₹1,500 - ₹2,200</button>
+              </div>
+            </div>
+          </div>
 
-            <div class="pro" id="pro8">
-                <img src="Images/cable1.jfif" alt="Product img" class="img">
-                <div class="imgdesc">
-                    <h2>
-                        Product Type: <a href="url">LED Bulb</a><br>
-                        Product Brand: <a href="url">Phillips</a>
-                    </h2>
-                    <a href="productfull.html" target="_blank">
-                        <h4>Click here for more info</h4>
-                    </a>
-                </div>
+          <!-- Product 7 -->
+          <div class="product-card">
+            <div class="product-image">
+              <img src="Images/fridge2.jfif" alt="Whirlpool Fridge" />
             </div>
+            <div class="product-info">
+              <h3>Whirlpool Fridge</h3>
+              <div class="product-meta">
+                <span><i class="fas fa-tag"></i> Fridge</span>
+                <span><i class="fas fa-star"></i> 4.1</span>
+              </div>
+              <div class="product-actions">
+                <a href="item.html" class="view-btn"
+                  >View Details <i class="fas fa-info-circle"></i
+                ></a>
+                <button class="price-btn">₹1,400 - ₹2,000</button>
+              </div>
+            </div>
+          </div>
 
-            <div class="pro" id="pro9">
-                <img src="Images/cables2.jfif" alt="Product img" class="img">
-                <div class="imgdesc">
-                    <h2>
-                        Product Type: <a href="url">Cable Wire</a><br>
-                        Product Brand: <a href="url">Others</a>
-                    </h2>
-                    <a href="productfull.html" target="_blank">
-                        <h4>Click here for more info</h4>
-                    </a>
-                </div>
+          <!-- Product 8 -->
+          <div class="product-card">
+            <div class="product-image">
+              <img src="Images/cable1.jfif" alt="Phillips LED Bulb" />
             </div>
+            <div class="product-info">
+              <h3>Phillips LED Bulb</h3>
+              <div class="product-meta">
+                <span><i class="fas fa-tag"></i> LED Bulb</span>
+                <span><i class="fas fa-star"></i> 3.8</span>
+              </div>
+              <div class="product-actions">
+                <a href="item.html" class="view-btn"
+                  >View Details <i class="fas fa-info-circle"></i
+                ></a>
+                <button class="price-btn">₹100 - ₹150</button>
+              </div>
+            </div>
+          </div>
 
-            <div class="pro" id="pro10">
-                <img src="Images/tele1.jfif" alt="Product img" class="img">
-                <div class="imgdesc">
-                    <h2>
-                        Product Type: <a href="url">RAM</a><br>
-                        Product Brand: <a href="url">Others</a>
-                    </h2>
-                    <a href="productfull.html" target="_blank">
-                        <h4>Click here for more info</h4>
-                    </a>
-                </div>
+          <!-- Product 9 -->
+          <div class="product-card">
+            <div class="product-image">
+              <img src="Images/cables2.jfif" alt="Cable Wire" />
             </div>
+            <div class="product-info">
+              <h3>Cable Wire</h3>
+              <div class="product-meta">
+                <span><i class="fas fa-tag"></i> Cable Wire</span>
+                <span><i class="fas fa-star"></i> 3.5</span>
+              </div>
+              <div class="product-actions">
+                <a href="item.html" class="view-btn"
+                  >View Details <i class="fas fa-info-circle"></i
+                ></a>
+                <button class="price-btn">₹50 - ₹100</button>
+              </div>
+            </div>
+          </div>
 
-            <div class="pro" id="pro11">
-                <img src="Images/tele2.jfif" alt="Product img" class="img">
-                <div class="imgdesc">
-                    <h2>
-                        Product Type: <a href="url">RAM</a><br>
-                        Product Brand: <a href="url">Kingston</a>
-                    </h2>
-                    <a href="productfull.html" target="_blank">
-                        <h4>Click here for more info</h4>
-                    </a>
-                </div>
+          <!-- Product 10 -->
+          <div class="product-card">
+            <div class="product-image">
+              <img src="Images/tele1.jfif" alt="RAM" />
             </div>
+            <div class="product-info">
+              <h3>RAM</h3>
+              <div class="product-meta">
+                <span><i class="fas fa-tag"></i> RAM</span>
+                <span><i class="fas fa-star"></i> 4.0</span>
+              </div>
+              <div class="product-actions">
+                <a href="item.html" class="view-btn"
+                  >View Details <i class="fas fa-info-circle"></i
+                ></a>
+                <button class="price-btn">₹200 - ₹350</button>
+              </div>
+            </div>
+          </div>
 
-            <div class="pro" id="pro12">
-                <img src="Images/lap2.jpg" alt="Product img" class="img">
-                <div class="imgdesc">
-                    <h2>
-                        Product Type: <a href="url">Laptop</a><br>
-                        Product Brand: <a href="url">Dell</a>
-                    </h2>
-                    <a href="productfull.html" target="_blank">
-                        <h4>Click here for more info</h4>
-                    </a>
-                </div>
+          <!-- Product 11 -->
+          <div class="product-card">
+            <div class="product-image">
+              <img src="Images/tele2.jfif" alt="Kingston RAM" />
             </div>
+            <div class="product-info">
+              <h3>Kingston RAM</h3>
+              <div class="product-meta">
+                <span><i class="fas fa-tag"></i> RAM</span>
+                <span><i class="fas fa-star"></i> 4.2</span>
+              </div>
+              <div class="product-actions">
+                <a href="item.html" class="view-btn"
+                  >View Details <i class="fas fa-info-circle"></i
+                ></a>
+                <button class="price-btn">₹250 - ₹400</button>
+              </div>
+            </div>
+          </div>
 
-            <div class="pro" id="pro13">
-                <img src="Images/mo1.jfif" alt="Product img" class="img">
-                <div class="imgdesc">
-                    <h2>
-                        Product Type: <a href="url">Mother-Board</a><br>
-                        Product Brand: <a href="url">ASUS</a>
-                    </h2>
-                    <a href="productfull.html" target="_blank">
-                        <h4>Click here for more info</h4>
-                    </a>
-                </div>
+          <!-- Product 12 -->
+          <div class="product-card">
+            <div class="product-image">
+              <img src="Images/lap2.jpg" alt="Dell Laptop" />
+              <div class="product-badge">Popular</div>
             </div>
+            <div class="product-info">
+              <h3>Dell Laptop</h3>
+              <div class="product-meta">
+                <span><i class="fas fa-tag"></i> Laptop</span>
+                <span><i class="fas fa-star"></i> 4.6</span>
+              </div>
+              <div class="product-actions">
+                <a href="item.html" class="view-btn"
+                  >View Details <i class="fas fa-info-circle"></i
+                ></a>
+                <button class="price-btn">₹1,500 - ₹2,000</button>
+              </div>
+            </div>
+          </div>
 
-            <div class="pro" id="pro14">
-                <img src="Images/mo2.jfif" alt="Product img" class="img">
-                <div class="imgdesc">
-                    <h2>
-                        Product Type: <a href="url">Mother-Board</a><br>
-                        Product Brand: <a href="url">AS Rock</a>
-                    </h2>
-                    <a href="productfull.html" target="_blank">
-                        <h4>Click here for more info</h4>
-                    </a>
-                </div>
+          <!-- Product 13 -->
+          <div class="product-card">
+            <div class="product-image">
+              <img src="Images/mo1.jfif" alt="ASUS Motherboard" />
             </div>
+            <div class="product-info">
+              <h3>ASUS Motherboard</h3>
+              <div class="product-meta">
+                <span><i class="fas fa-tag"></i> Motherboard</span>
+                <span><i class="fas fa-star"></i> 4.3</span>
+              </div>
+              <div class="product-actions">
+                <a href="item.html" class="view-btn"
+                  >View Details <i class="fas fa-info-circle"></i
+                ></a>
+                <button class="price-btn">₹600 - ₹900</button>
+              </div>
+            </div>
+          </div>
 
-            <div class="pro" id="pro15">
-                <img src="Images/sw.jpg" alt="Product img" class="img">
-                <div class="imgdesc">
-                    <h2>
-                        Product Type: <a href="url">Smart Watch</a><br>
-                        Product Brand: <a href="url">Apple</a>
-                    </h2>
-                    <a href="productfull.html" target="_blank">
-                        <h4>Click here for more info</h4>
-                    </a>
-                </div>
+          <!-- Product 14 -->
+          <div class="product-card">
+            <div class="product-image">
+              <img src="Images/mo2.jfif" alt="AS Rock Motherboard" />
             </div>
+            <div class="product-info">
+              <h3>AS Rock Motherboard</h3>
+              <div class="product-meta">
+                <span><i class="fas fa-tag"></i> Motherboard</span>
+                <span><i class="fas fa-star"></i> 4.1</span>
+              </div>
+              <div class="product-actions">
+                <a href="item.html" class="view-btn"
+                  >View Details <i class="fas fa-info-circle"></i
+                ></a>
+                <button class="price-btn">₹500 - ₹800</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 15 -->
+          <div class="product-card">
+            <div class="product-image">
+              <img src="Images/sw.jpg" alt="Apple Smart Watch" />
+              <div class="product-badge">Premium</div>
+            </div>
+            <div class="product-info">
+              <h3>Apple Smart Watch</h3>
+              <div class="product-meta">
+                <span><i class="fas fa-tag"></i> Smart Watch</span>
+                <span><i class="fas fa-star"></i> 4.8</span>
+              </div>
+              <div class="product-actions">
+                <a href="item.html" class="view-btn"
+                  >View Details <i class="fas fa-info-circle"></i
+                ></a>
+                <button class="price-btn">₹2,000 - ₹3,000</button>
+              </div>
+            </div>
+          </div>
         </div>
 
         <div class="pagination">
-            Page:
-            <a href="productview.html">1</a> |
-            <a href="productview.html">2</a> |
-            <a href="productview.html">3</a> |
-            <a href="productview.html">Next</a>
+          <a href="#" class="page-link active">1</a>
+          <a href="#" class="page-link">2</a>
+          <a href="#" class="page-link">3</a>
+          <a href="productview.html" class="page-link next"
+            >Next <i class="fas fa-chevron-right"></i
+          ></a>
+        </div>
+      </section>
+
+      <!-- <section class="cta-section">
+        <div class="cta-content">
+          <h2>Ready to Sell Your E-Waste?</h2>
+          <p>Get instant quotes and contribute to a greener planet</p>
+          <a href="contact.html" class="cta-button"
+            >Get Started <i class="fas fa-arrow-right"></i
+          ></a>
+        </div>
+      </section> -->
+    </main>
+
+    <footer class="footer">
+      <div class="footer-container">
+        <!-- Navigation Links -->
+        <div class="footer-links">
+          <div class="footer-section">
+            <h3>Quick Links</h3>
+            <ul>
+              <li>
+                <a href="index.html"><i class="fas fa-home"></i> Home</a>
+              </li>
+              <li>
+                <a href="aboutus.html"
+                  ><i class="fas fa-info-circle"></i> About Us</a
+                >
+              </li>
+              <li>
+                <a href="faq.html"
+                  ><i class="fas fa-question-circle"></i> FAQ's</a
+                >
+              </li>
+              <li>
+                <a href="contact.html"
+                  ><i class="fas fa-envelope"></i> Contact</a
+                >
+              </li>
+              <li>
+                <a href="products.html"
+                  ><i class="fas fa-shopping-bag"></i> Products</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Newsletter Section -->
+          <div class="footer-section">
+            <h3>Stay Updated</h3>
+            <p>Subscribe to our newsletter for the latest updates</p>
+            <div class="newsletter-form">
+              <input type="email" placeholder="Enter your email" required />
+              <button type="submit" class="submit-btn">
+                <i class="fas fa-paper-plane"></i> Subscribe
+              </button>
+            </div>
+          </div>
+
+          <!-- Social Media -->
+          <div class="footer-section">
+            <h3>Connect With Us</h3>
+            <div class="social-media">
+              <a
+                href="https://facebook.com"
+                target="_blank"
+                aria-label="Facebook"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a href="https://twitter.com" target="_blank" aria-label="Twitter"
+                ><i class="fab fa-twitter"></i
+              ></a>
+              <a
+                href="https://instagram.com"
+                target="_blank"
+                aria-label="Instagram"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a href="https://github.com" target="_blank" aria-label="GitHub"
+                ><i class="fab fa-github"></i
+              ></a>
+              <a
+                href="https://linkedin.com"
+                target="_blank"
+                aria-label="LinkedIn"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+            </div>
+          </div>
         </div>
 
-        <footer>
-            <div class="footer">
-                <div class="footer-container">
-                    <div class="links">
-                        <a href="productview.html">index</a>
-                        <a href="aboutus.html">About Us</a>
-                        <a href="faq.html">FAQ's</a>
-                        <a href="contact.html">Contact</a>
-                    </div>
-
-                    <div class="subscription">
-                        <p>Get the latest updates. Subscribe with your
-                            email:</p>
-                        <div class="email-subscribe">
-                            <input type="email" placeholder="Enter your email">
-                            <button class="btn">Subscribe</button>
-                        </div>
-                    </div>
-
-                    <div class="social">
-                        <h3>Follow Us</h3>
-                        <div class="social-icons">
-                            <a href="https://facebook.com" target="_blank"><i
-                                    class="fa fa-facebook"></i></a>
-                            <a href="https://twitter.com" target="_blank"><i
-                                    class="fa fa-twitter"></i></a>
-                            <a href="https://instagram.com" target="_blank"><i
-                                    class="fa fa-instagram"></i></a>
-                            <a href="https://github.com" target="_blank"><i
-                                    class="fa fa-github"></i></a>
-                            <a href="https://linkedin.com" target="_blank"><i
-                                    class="fa fa-linkedin"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </footer>
-
-    </body>
-
+        <!-- Copyright -->
+        <div class="footer-bottom">
+          <p>&copy; 2025 Rethread. All Rights Reserved.</p>
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>

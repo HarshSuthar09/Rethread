@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rethread - Your E-Waste Friend</title>
+    <link rel="stylesheet" href="item.css">
+    <link rel="stylesheet" href="navbar.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <style>
+      :root {
+        --primary: #2e8b57;
+        --primary-hover: #3cb371;
+        --secondary: #333;
+        --light-bg: #f9f9f9;
+        --border: #ddd;
+        --text: #333;
+        --light-text: #666;
+        --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background-color: var(--light-bg);
+        color: var(--text);
+        line-height: 1.6;
+      }
+
+      .header {
+        background-color: white;
+        padding: 15px 0;
+        box-shadow: var(--shadow);
+        position: sticky;
+        top: 0;
+        z-index: 100;
+      }
+
+      .header-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      .logo {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-weight: bold;
+        font-size: 1.5rem;
+        color: var(--primary);
+      }
+
+      .logo i {
+        font-size: 1.8rem;
+      }
+
+      .nav-links {
+        display: flex;
+        gap: 20px;
+      }
+
+      .nav-links a {
+        color: var(--secondary);
+        text-decoration: none;
+        font-weight: 500;
+        transition: color 0.3s;
+      }
+
+      .nav-links a:hover {
+        color: var(--primary);
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 40px auto;
+        padding: 0 20px;
+      }
+
+      .product-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+        background-color: white;
+        border-radius: 12px;
+        box-shadow: var(--shadow);
+        overflow: hidden;
+        padding: 30px;
+      }
+
+      .product-gallery {
+        position: relative;
+      }
+
+      .main-image {
+        width: 100%;
+        height: 400px;
+        object-fit: contain;
+        border-radius: 8px;
+        background-color: #f8f8f8;
+        border: 1px solid var(--border);
+      }
+
+      .thumbnail-container {
+        display: flex;
+        gap: 10px;
+        margin-top: 15px;
+        overflow-x: auto;
+        padding-bottom: 10px;
+      }
+
+      .thumbnail {
+        width: 80px;
+        height: 80px;
+        object-fit: cover;
+        border-radius: 4px;
+        border: 2px solid transparent;
+        cursor: pointer;
+        transition: all 0.3s;
+      }
+
+      .thumbnail:hover,
+      .thumbnail.active {
+        border-color: var(--primary);
+      }
+
+      .product-info {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .product-title {
+        font-size: 1.8rem;
+        margin-bottom: 10px;
+        color: var(--secondary);
+      }
+
+      .product-subtitle {
+        color: var(--light-text);
+        margin-bottom: 20px;
+        font-size: 1.1rem;
+      }
+
+      .product-meta {
+        display: flex;
+        gap: 20px;
+        margin-bottom: 20px;
+      }
+
+      .meta-item {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .meta-item i {
+        color: var(--primary);
+      }
+
+      .divider {
+        height: 1px;
+        background-color: var(--border);
+        margin: 20px 0;
+      }
+
+      .product-section {
+        margin-bottom: 25px;
+      }
+
+      .section-title {
+        font-size: 1.3rem;
+        margin-bottom: 15px;
+        color: var(--secondary);
+        position: relative;
+        padding-bottom: 8px;
+      }
+
+      .section-title:after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 40px;
+        height: 3px;
+        background-color: var(--primary);
+      }
+
+      .spec-list {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+      }
+
+      .spec-item {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .spec-label {
+        font-weight: 500;
+        color: var(--light-text);
+        font-size: 0.9rem;
+      }
+
+      .spec-value {
+        font-weight: 500;
+      }
+
+      .spec-value a {
+        color: var(--primary);
+        text-decoration: none;
+      }
+
+      .spec-value a:hover {
+        text-decoration: underline;
+      }
+
+      .price-section {
+        background-color: #f8f8f8;
+        border-radius: 8px;
+        padding: 20px;
+        margin-bottom: 25px;
+      }
+
+      .price-value {
+        font-size: 2rem;
+        font-weight: bold;
+        color: var(--primary);
+      }
+
+      .price-tax {
+        font-size: 0.9rem;
+        color: var(--light-text);
+      }
+
+      .seller-section {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        background-color: #f8f8f8;
+        border-radius: 8px;
+        padding: 20px;
+      }
+
+      .seller-avatar {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+
+      .seller-info {
+        flex: 1;
+      }
+
+      .seller-name {
+        font-weight: 500;
+        margin-bottom: 5px;
+      }
+
+      .seller-rating {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        margin-bottom: 5px;
+      }
+
+      .seller-rating i {
+        color: #ffd700;
+      }
+
+      .seller-location {
+        font-size: 0.9rem;
+        color: var(--light-text);
+      }
+
+      .btn {
+        display: inline-block;
+        padding: 12px 24px;
+        background-color: var(--primary);
+        color: white;
+        border: none;
+        border-radius: 6px;
+        font-size: 1rem;
+        font-weight: 500;
+        cursor: pointer;
+        transition: all 0.3s;
+        text-decoration: none;
+        text-align: center;
+      }
+
+      .btn:hover {
+        background-color: var(--primary-hover);
+        transform: translateY(-2px);
+      }
+
+      .btn-outline {
+        background-color: transparent;
+        border: 1px solid var(--primary);
+        color: var(--primary);
+      }
+
+      .btn-outline:hover {
+        background-color: var(--primary);
+        color: white;
+      }
+
+      .action-buttons {
+        display: flex;
+        gap: 15px;
+        margin-top: 25px;
+      }
+
+      .condition-badge {
+        display: inline-block;
+        padding: 5px 10px;
+        border-radius: 4px;
+        font-size: 0.9rem;
+        font-weight: 500;
+        margin-bottom: 15px;
+      }
+
+      .condition-badge.good {
+        background-color: rgba(46, 139, 87, 0.1);
+        color: var(--primary);
+      }
+
+      .condition-badge.fair {
+        background-color: rgba(255, 165, 0, 0.1);
+        color: orange;
+      }
+
+      .condition-badge.poor {
+        background-color: rgba(255, 0, 0, 0.1);
+        color: red;
+      }
+
+      @media (max-width: 768px) {
+        .product-container {
+          grid-template-columns: 1fr;
+        }
+
+        .spec-list {
+          grid-template-columns: 1fr;
+        }
+
+        .action-buttons {
+          flex-direction: column;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="left">
+        <a href="index.html" class="logo-link">
+          <!-- <img src="Images/logo.png" alt="Rethread Logo" /> -->
+          <h1>RETHREAD</h1>
+        </a>
+      </div>
+
+      <div class="mid">
+        <nav>
+          <ul class="navbar">
+            <li>
+              <a href="index.html" class="active">
+                <i class="fas fa-home"></i>
+                <span>Home</span>
+              </a>
+            </li>
+            <li>
+              <a href="aboutus.html">
+                <i class="fas fa-info-circle"></i>
+                <span>About Us</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="products.html">
+                <i class="fas fa-shopping-bag"></i>
+                <span>Products</span>
+              </a>
+            </li>
+            <li>
+              <a href="faq.html">
+                <i class="fas fa-question-circle"></i>
+                <span>FAQs</span>
+              </a>
+            </li>
+            <li>
+              <a href="contact.html">
+                <i class="fas fa-envelope"></i>
+                <span>Contact</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="dropdown">
+          <button
+            class="dropbtn"
+            aria-expanded="false"
+            aria-controls="dropdown-content"
+            id="menu-button"
+          >
+            <i class="fas fa-bars"></i>
+            <span>Menu</span>
+          </button>
+          <div class="dropdown-content" id="dropdown-content">
+            <a href="index.html" class="active">
+              <i class="fas fa-home"></i> Home
+            </a>
+            <a href="aboutus.html">
+              <i class="fas fa-info-circle"></i> About Us
+            </a>
+            <a href="services.html">
+              <i class="fas fa-recycle"></i> Services
+            </a>
+            <a href="products.html">
+              <i class="fas fa-shopping-bag"></i> Products
+            </a>
+            <a href="faq.html"> <i class="fas fa-question-circle"></i> FAQs </a>
+            <a href="contact.html"> <i class="fas fa-envelope"></i> Contact </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="right">
+        <a href="login.html" class="btn login-btn">
+          <i class="fas fa-sign-in-alt"></i>
+          <span>Login</span>
+        </a>
+        <a href="register.html" class="btn register-btn">
+          <i class="fas fa-user-plus"></i>
+          <span>Register</span>
+        </a>
+      </div>
+    </header>
+
+    <div class="container">
+      <div class="product-container">
+        <div class="product-gallery">
+          <img
+            src="/Images/LENOVOLAPTOP.jpeg"
+            alt="Lenovo Laptop"
+            class="main-image"
+          />
+          <div class="thumbnail-container">
+            <img
+              src="/api/placeholder/80/80"
+              alt="Thumbnail 1"
+              class="thumbnail active"
+            />
+            <img
+              src="/api/placeholder/80/80"
+              alt="Thumbnail 2"
+              class="thumbnail"
+            />
+            <img
+              src="/api/placeholder/80/80"
+              alt="Thumbnail 3"
+              class="thumbnail"
+            />
+            <img
+              src="/api/placeholder/80/80"
+              alt="Thumbnail 4"
+              class="thumbnail"
+            />
+          </div>
+        </div>
+
+        <div class="product-info">
+          <span class="condition-badge good">Good Condition</span>
+          <h1 class="product-title">Lenovo 14" Laptop</h1>
+          <p class="product-subtitle">
+            Intel Core i5 Processor, 16GB RAM, 256GB SSD
+          </p>
+
+          <div class="product-meta">
+            <div class="meta-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <span>New Delhi</span>
+            </div>
+            <div class="meta-item">
+              <i class="fas fa-calendar-alt"></i>
+              <span>Posted 3 days ago</span>
+            </div>
+            <div class="meta-item">
+              <i class="fas fa-eye"></i>
+              <span>52 views</span>
+            </div>
+          </div>
+
+          <div class="divider"></div>
+
+          <div class="product-section">
+            <h3 class="section-title">Specifications</h3>
+            <div class="spec-list">
+              <div class="spec-item">
+                <span class="spec-label">Product Type</span>
+                <span class="spec-value"><a href="#">Laptop</a></span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">Brand</span>
+                <span class="spec-value"><a href="#">Lenovo</a></span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">Processor</span>
+                <span class="spec-value">Intel Core i5</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">RAM</span>
+                <span class="spec-value">16GB</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">Storage</span>
+                <span class="spec-value">256GB SSD</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">Display</span>
+                <span class="spec-value">14" (2160 x 1440 pixels)</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">Age</span>
+                <span class="spec-value">2 years</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">Working Status</span>
+                <span class="spec-value">Fully Functional</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="price-section">
+            <h3 class="section-title">Expected Price</h3>
+            <div class="price-value">₹ 15,000</div>
+            <div class="price-tax">Including all taxes</div>
+          </div>
+
+          <div class="seller-section">
+            <!-- <img
+              src="/api/placeholder/60/60"
+              class="seller-avatar"
+            /> -->
+            <div class="seller-info">
+              <h4 class="seller-name">Rahul Sharma</h4>
+              <div class="seller-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+                <span>4.5</span>
+              </div>
+              <div class="seller-location">
+                <i class="fas fa-map-marker-alt"></i> Delhi, India
+              </div>
+            </div>
+          </div>
+
+          <div class="action-buttons">
+            <button class="btn">
+              <i class="fas fa-comment"></i> Chat with Seller
+            </button>
+            <button class="btn btn-outline">
+              <i class="fas fa-heart"></i> Add to Wishlist
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // Basic JavaScript for thumbnail functionality
+      document.addEventListener("DOMContentLoaded", function () {
+        const thumbnails = document.querySelectorAll(".thumbnail");
+        const mainImage = document.querySelector(".main-image");
+
+        thumbnails.forEach((thumbnail) => {
+          thumbnail.addEventListener("click", function () {
+            // Remove active class from all thumbnails
+            thumbnails.forEach((t) => t.classList.remove("active"));
+
+            // Add active class to clicked thumbnail
+            this.classList.add("active");
+
+            // Update main image (in a real implementation, you would change the src)
+            // Here we're just simulating the change for demonstration
+            mainImage.style.opacity = "0.7";
+            setTimeout(() => {
+              mainImage.style.opacity = "1";
+            }, 300);
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

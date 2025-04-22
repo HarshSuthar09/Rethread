@@ -1,131 +1,270 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FAQs - Rethread</title>
+    <link rel="stylesheet" href="faq.css" />
+    <link rel="stylesheet" href="navbar.css" />
+    <link rel="stylesheet" href="footer.css" />
+    <link rel="icon" href="Images/logo.png" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Header will be included from navbar.html -->
+    <header class="header">
+      <div class="left">
+        <a href="index.html" class="logo-link">
+          <!-- <img src="Images/logo.png" alt="Rethread Logo" /> -->
+          <h1>RETHREAD</h1>
+        </a>
+      </div>
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Rethread-your ewaste friend </title>
-        <link rel="stylesheet" href="faq.css">
-        <link rel="stylesheet" href="navbar.css">
-        <link rel="icon" href="Images/logo.png" type="image/x-icon">
-    </head>
+      <div class="mid">
+        <nav>
+          <ul class="navbar">
+            <li>
+              <a href="index.html" class="active">
+                <i class="fas fa-home"></i>
+                <span>Home</span>
+              </a>
+            </li>
+            <li>
+              <a href="aboutus.html">
+                <i class="fas fa-info-circle"></i>
+                <span>About Us</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="products.html">
+                <i class="fas fa-shopping-bag"></i>
+                <span>Products</span>
+              </a>
+            </li>
+            <li>
+              <a href="faq.html">
+                <i class="fas fa-question-circle"></i>
+                <span>FAQs</span>
+              </a>
+            </li>
+            <li>
+              <a href="contact.html">
+                <i class="fas fa-envelope"></i>
+                <span>Contact</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
 
-    <body>
-        <header class="header">
-            <div class="left">
-                 <img src="Images/logo.png" alt="logo"> 
-                
-            </div>
-            <div class="mid">
-                <ul class="navbar">
-                    <li><a href="index.html">HOME</a></li>
-                    <li><a href="aboutus.html">ABOUT US</a></li>
-                    <li><a href="faq.html">FAQs</a></li>
-                    <li><a href="contact.html">CONTACT US</a></li>
-                    <li><a href="sell.html">PRODUCT</a></li>
-                </ul>
-                <div class="dropdown">
-                    <button class="dropbtn">Main Menu</button>
-                    <div class="dropdown-content">
-                        <a href="index.html">HOME</a>
-                        <a href="aboutus.html">ABOUT US</a>
-                        <a href="faq.html">FAQs</a>
-                        <a href="contact.html">CONTACT US</a>
-                        <li><a href="sell.html">PRODUCT</a></li>
-                    </div>
-                </div>
-            </div>
-            <div class="right">
-                <button class="btn"><a
-                        href="login.html">Register/Login</a></button>
-            </div>
-        </header>
-        <header class="upper">
-            <div class="top" id="left">
-                <p>Hello,<br>How can we help you?</p>
-            </div>
-            <div class="top" id="right">
-                <p>Search your query</p>
-                <div class="inp">
-                    <input type="text" placeholder="Search by topic or keyword">
-                </div>
-            </div>
-        </header>
+        <div class="dropdown">
+          <button
+            class="dropbtn"
+            aria-expanded="false"
+            aria-controls="dropdown-content"
+            id="menu-button"
+          >
+            <i class="fas fa-bars"></i>
+            <span>Menu</span>
+          </button>
+          <div class="dropdown-content" id="dropdown-content">
+            <a href="index.html" class="active">
+              <i class="fas fa-home"></i> Home
+            </a>
+            <a href="aboutus.html">
+              <i class="fas fa-info-circle"></i> About Us
+            </a>
+            <a href="services.html">
+              <i class="fas fa-recycle"></i> Services
+            </a>
+            <a href="products.html">
+              <i class="fas fa-shopping-bag"></i> Products
+            </a>
+            <a href="faq.html"> <i class="fas fa-question-circle"></i> FAQs </a>
+            <a href="contact.html"> <i class="fas fa-envelope"></i> Contact </a>
+          </div>
+        </div>
+      </div>
 
-        <section>
-            <h1 class="tit">Some Frequently Asked Questions</h1>
-            <div class="cont">
-                <div class="ques">
-                    <div class="question">Q. What is E-waste?</div>
-                    <div class="answer">
-                        E-waste is anything containing electric components, such
-                        as remote control cars, mobiles, laptops, and batteries.
-                    </div>
-                </div>
-                <div class="ques">
-                    <div class="question">Q. What Qualifies As E-Waste?</div>
-                    <div class="answer">
-                        Items like IT equipment (laptops, printers, monitors),
-                        domestic appliances (fridges, TVs), and electrical
-                        fixtures qualify as E-waste.
-                    </div>
-                </div>
-                <div class="ques">
-                    <div class="question">Q. What is IT hardware
-                        destruction?</div>
-                    <div class="answer">
-                        It involves securely destroying data on electronic
-                        media. Certificates are provided to ensure secure
-                        disposal.
-                        <br>To recycle your E-waste, <a href="login.html">Click
-                            Here</a>.
-                    </div>
-                </div>
-                <div class="ques">
-                    <div class="question">Q. What is E-waste Data Destruction &
-                        Why is it Important?</div>
-                    <div class="answer">
-                        It ensures secure deletion of data-bearing materials.
-                        This process helps protect privacy, safeguard the
-                        environment, and comply with standards.
-                    </div>
-                </div>
-                <div class="ques">
-                    <div class="question">Q. Why is E-waste management
-                        important?</div>
-                    <div class="answer">
-                        Proper E-waste management prevents pollution and reduces
-                        greenhouse gas emissions by recycling electrical
-                        components.
-                    </div>
-                </div>
-                <div class="ques">
-                    <div class="question">Q. How can I get paid here?</div>
-                    <div class="answer">
-                        After posting your waste for sale, verification takes up
-                        to 24 hours. Once posted, buyers can contact you
-                        directly.
-                    </div>
-                </div>
-                <div class="ques" id="ultima">
-                    <div class="question">Have another query? Feel free to ask
-                        us!</div>
-                    <div class="ask">
-                        <div class="formgrp">
-                            <input type="text" placeholder="Enter your name"
-                                required>
-                        </div>
-                        <div class="formgrp">
-                            <input type="email" placeholder="Enter your email"
-                                required>
-                        </div>
-                        <textarea rows="5"
-                            placeholder="Describe your query in detail"></textarea>
-                        <button class="btn">Send</button>
-                    </div>
-                </div>
+      <div class="right">
+        <a href="login.html" class="btn login-btn">
+          <i class="fas fa-sign-in-alt"></i>
+          <span>Login</span>
+        </a>
+        <a href="register.html" class="btn register-btn">
+          <i class="fas fa-user-plus"></i>
+          <span>Register</span>
+        </a>
+      </div>
+    </header>
+    <main class="faq-main">
+      <section class="faq-hero">
+        <div class="hero-container">
+          <div class="hero-text">
+            <h1>Hello, How can we help you?</h1>
+            <div class="search-container">
+              <input type="text" placeholder="Search by topic or keyword" />
+              <button class="search-btn">
+                <i class="fas fa-search"></i>
+              </button>
             </div>
-        </section>
-    </body>
+          </div>
+        </div>
+      </section>
 
+      <section class="faq-section">
+        <div class="section-header">
+          <h2>Frequently Asked Questions</h2>
+          <p>Find answers to common questions about e-waste recycling</p>
+        </div>
+
+        <div class="faq-container">
+          <!-- FAQ Item 1 -->
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>What is E-waste?</h3>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              <p>
+                E-waste is anything containing electric components, such as
+                remote control cars, mobiles, laptops, and batteries.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ Item 2 -->
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>What Qualifies As E-Waste?</h3>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              <p>
+                Items like IT equipment (laptops, printers, monitors), domestic
+                appliances (fridges, TVs), and electrical fixtures qualify as
+                E-waste.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ Item 3 -->
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>What is IT hardware destruction?</h3>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              <p>
+                It involves securely destroying data on electronic media.
+                Certificates are provided to ensure secure disposal.
+              </p>
+              <a href="login.html" class="faq-link"
+                >Click Here to recycle your E-waste
+                <i class="fas fa-arrow-right"></i
+              ></a>
+            </div>
+          </div>
+
+          <!-- FAQ Item 4 -->
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>What is E-waste Data Destruction & Why is it Important?</h3>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              <p>
+                It ensures secure deletion of data-bearing materials. This
+                process helps protect privacy, safeguard the environment, and
+                comply with standards.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ Item 5 -->
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>Why is E-waste management important?</h3>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              <p>
+                Proper E-waste management prevents pollution and reduces
+                greenhouse gas emissions by recycling electrical components.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ Item 6 -->
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>How can I get paid here?</h3>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              <p>
+                After posting your waste for sale, verification takes up to 24
+                hours. Once posted, buyers can contact you directly.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-form">
+          <h3>Still have questions? Contact us directly</h3>
+          <form>
+            <div class="form-group">
+              <input type="text" placeholder="Your Name" required />
+            </div>
+            <div class="form-group">
+              <input type="email" placeholder="Your Email" required />
+            </div>
+            <div class="form-group">
+              <textarea
+                placeholder="Describe your query in detail"
+                rows="5"
+                required
+              ></textarea>
+            </div>
+            <button type="submit" class="submit-btn">
+              Send Message <i class="fas fa-paper-plane"></i>
+            </button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer will be included from footer.html -->
+
+    <script>
+      // FAQ toggle functionality
+      document.querySelectorAll(".faq-question").forEach((question) => {
+        question.addEventListener("click", () => {
+          const answer = question.nextElementSibling;
+          const icon = question.querySelector("i");
+
+          answer.classList.toggle("active");
+          icon.classList.toggle("fa-chevron-down");
+          icon.classList.toggle("fa-chevron-up");
+
+          // Close other open answers
+          document.querySelectorAll(".faq-answer").forEach((otherAnswer) => {
+            if (
+              otherAnswer !== answer &&
+              otherAnswer.classList.contains("active")
+            ) {
+              otherAnswer.classList.remove("active");
+              const otherIcon =
+                otherAnswer.previousElementSibling.querySelector("i");
+              otherIcon.classList.remove("fa-chevron-up");
+              otherIcon.classList.add("fa-chevron-down");
+            }
+          });
+        });
+      });
+    </script>
+  </body>
 </html>

@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rethread - Your E-Waste Friend</title>
+    <link rel="stylesheet" href="products.css" />
+    <link rel="stylesheet" href="navbar.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="left">
+        <a href="index.html" class="logo-link">
+          <!-- <img src="Images/logo.png" alt="Rethread Logo" /> -->
+          <h1>RETHREAD</h1>
+        </a>
+      </div>
+
+      <div class="mid">
+        <nav>
+          <ul class="navbar">
+            <li>
+              <a href="index.html" class="active">
+                <i class="fas fa-home"></i>
+                <span>Home</span>
+              </a>
+            </li>
+            <li>
+              <a href="aboutus.html">
+                <i class="fas fa-info-circle"></i>
+                <span>About Us</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="products.html">
+                <i class="fas fa-shopping-bag"></i>
+                <span>Products</span>
+              </a>
+            </li>
+            <li>
+              <a href="faq.html">
+                <i class="fas fa-question-circle"></i>
+                <span>FAQs</span>
+              </a>
+            </li>
+            <li>
+              <a href="contact.html">
+                <i class="fas fa-envelope"></i>
+                <span>Contact</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="dropdown">
+          <button
+            class="dropbtn"
+            aria-expanded="false"
+            aria-controls="dropdown-content"
+            id="menu-button"
+          >
+            <i class="fas fa-bars"></i>
+            <span>Menu</span>
+          </button>
+          <div class="dropdown-content" id="dropdown-content">
+            <a href="index.html" class="active">
+              <i class="fas fa-home"></i> Home
+            </a>
+            <a href="aboutus.html">
+              <i class="fas fa-info-circle"></i> About Us
+            </a>
+            <a href="services.html">
+              <i class="fas fa-recycle"></i> Services
+            </a>
+            <a href="products.html">
+              <i class="fas fa-shopping-bag"></i> Products
+            </a>
+            <a href="faq.html"> <i class="fas fa-question-circle"></i> FAQs </a>
+            <a href="contact.html"> <i class="fas fa-envelope"></i> Contact </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="right">
+        <a href="login.html" class="btn login-btn">
+          <i class="fas fa-sign-in-alt"></i>
+          <span>Login</span>
+        </a>
+        <a href="register.html" class="btn register-btn">
+          <i class="fas fa-user-plus"></i>
+          <span>Register</span>
+        </a>
+      </div>
+    </header>
+
+    <div class="container">
+      <div class="page-title">
+        <h1>Sell Your E-Waste</h1>
+        <p>Help the environment by responsibly selling your electronic waste</p>
+      </div>
+
+      <div class="form-container">
+        <div class="form-section">
+          <h2>Product Details</h2>
+
+          <div class="form-group">
+            <label for="product-type">Product Category</label>
+            <select id="product-type" class="form-control">
+              <option value="" disabled selected>Select a category</option>
+              <option value="Earphones/Headphones">Earphones/Headphones</option>
+              <option value="Fridge">Refrigerator</option>
+              <option value="Laptop">Laptop</option>
+              <option value="TV">Television</option>
+              <option value="Cables">Cables</option>
+              <option value="Telecom">Telecom Equipment</option>
+              <option value="Battery">Batteries</option>
+              <option value="Smartphone">Smartphone</option>
+              <option value="Computer">Desktop Computer</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="brand">Brand</label>
+            <select id="brand" class="form-control">
+              <option value="" disabled selected>Select a brand</option>
+              <option value="Samsung">Samsung</option>
+              <option value="Apple">Apple</option>
+              <option value="Redmi">Redmi</option>
+              <option value="Lenovo">Lenovo</option>
+              <option value="HP">HP</option>
+              <option value="Dell">Dell</option>
+              <option value="LG">LG</option>
+              <option value="Sony">Sony</option>
+              <option value="Bosch">Bosch</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="model-name">Model Name/Number (if known)</label>
+            <input
+              type="text"
+              id="model-name"
+              class="form-control"
+              placeholder="e.g., iPhone 11, Galaxy S10"
+            />
+          </div>
+
+          <div class="form-group">
+            <label>Condition</label>
+            <div class="condition-selector">
+              <div class="condition-option">
+                <i class="fas fa-bolt"></i>
+                <p>Working</p>
+              </div>
+              <div class="condition-option">
+                <i class="fas fa-wrench"></i>
+                <p>Needs Repair</p>
+              </div>
+              <div class="condition-option">
+                <i class="fas fa-times-circle"></i>
+                <p>Not Working</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="description">Description</label>
+            <textarea
+              id="description"
+              class="form-control"
+              rows="4"
+              placeholder="Describe your product's condition, age, any defects or issues..."
+            ></textarea>
+          </div>
+        </div>
+
+        <div class="form-section">
+          <h2>Product Images</h2>
+
+          <div class="upload-area" id="upload-area">
+            <div class="upload-icon">
+              <i class="fas fa-cloud-upload-alt"></i>
+            </div>
+            <p class="upload-text">Click or drag images here to upload</p>
+            <p class="upload-hint">Upload up to 5 images (Max 5MB each)</p>
+            <input
+              type="file"
+              id="file-upload"
+              style="display: none"
+              multiple
+              accept="image/*"
+            />
+          </div>
+
+          <div class="preview-images">
+            <!-- <img src="/api/placeholder/80/80" class="preview-image" alt="placeholder">
+            <img src="/api/placeholder/80/80" class="preview-image" alt="placeholder"> -->
+          </div>
+
+          <div class="form-group">
+            <label for="pickup-address">Pickup Address</label>
+            <textarea
+              id="pickup-address"
+              class="form-control"
+              rows="3"
+              placeholder="Enter your complete address for pickup"
+            ></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="contact">Contact Number</label>
+            <input
+              type="tel"
+              id="contact"
+              class="form-control"
+              placeholder="Enter your phone number"
+            />
+          </div>
+
+          <div class="actions">
+            <button type="button" class="btn btn-secondary">Save Draft</button>
+            <button type="submit" class="btn btn-block">Post Product</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // Basic JavaScript for interactivity
+      document.addEventListener("DOMContentLoaded", function () {
+        // Image upload preview functionality
+        const uploadArea = document.getElementById("upload-area");
+        const fileInput = document.getElementById("file-upload");
+
+        uploadArea.addEventListener("click", function () {
+          fileInput.click();
+        });
+
+        // Condition selector
+        const conditionOptions = document.querySelectorAll(".condition-option");
+
+        conditionOptions.forEach((option) => {
+          option.addEventListener("click", function () {
+            conditionOptions.forEach((opt) => opt.classList.remove("active"));
+            this.classList.add("active");
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

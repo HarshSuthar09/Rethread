@@ -1,148 +1,443 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rethread - Your E-Waste Friend</title>
+    <link rel="stylesheet" href="productview.css" />
+    <link rel="stylesheet" href="navbar.css" />
+    <link rel="stylesheet" href="footer.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Rethread-your ewaste friend </title>
-        <link rel="stylesheet" href="productview.css">
-        <link rel="stylesheet" href="navbar.css">
-        <link rel="icon" href="Images/logo.png" type="image/x-icon">
-    </head>
+  <body>
+    <!-- Header Section -->
+    <header class="header">
+      <div class="left">
+        <a href="index.html" class="logo-link">
+          <!-- <img src="Images/logo.png" alt="Rethread Logo" /> -->
+          <h1>RETHREAD</h1>
+        </a>
+      </div>
 
-    <body>
-        <!-- Header Section -->
-        <header class="header">
-            <div class="left">
-                <img src="Images/logo.png" alt="logo">
-                
-            </div>
-            <div class="mid">
-                <ul class="navbar">
-                    <li><a href="index.html">HOME</a></li>
-                    <li><a href="aboutus.html">ABOUT US</a></li>
-                    <li><a href="faq.html">FAQs</a></li>
-                    <li><a href="contact.html">CONTACT US</a></li>
-                    <li><a href="sell.html">PRODUCT</a></li>
-                </ul>
-                <div class="dropdown">
-                    <button class="dropbtn">Main Menu</button>
-                    <div class="dropdown-content">
-                        <a href="index.html">HOME</a>
-                        <a href="aboutus.html">ABOUT US</a>
-                        <a href="faq.html">FAQs</a>
-                        <a href="contact.html">CONTACT US</a>
-                        <li><a href="sell.html">PRODUCT</a></li>
-                    </div>
-                </div>
-            </div>
-            <div class="right">
-                <button class="btn"><a
-                        href="login.html">Register/Login</a></button>
-            </div>
-        </header>
+      <div class="mid">
+        <nav>
+          <ul class="navbar">
+            <li>
+              <a href="index.html" class="active">
+                <i class="fas fa-home"></i>
+                <span>Home</span>
+              </a>
+            </li>
+            <li>
+              <a href="aboutus.html">
+                <i class="fas fa-info-circle"></i>
+                <span>About Us</span>
+              </a>
+            </li>
 
-        <!-- Product Details Section -->
-        <div class="product-details">
-            <div class="product-image">
-                <img src="Images/LENOVOLAPTOP.jpeg" alt="Laptop Detail">
-                <!-- <img src="Images/LENOVOLAPTOP.jpeg" alt="Laptop Detail"> -->
+            <li>
+              <a href="products.html">
+                <i class="fas fa-shopping-bag"></i>
+                <span>Products</span>
+              </a>
+            </li>
+            <li>
+              <a href="faq.html">
+                <i class="fas fa-question-circle"></i>
+                <span>FAQs</span>
+              </a>
+            </li>
+            <li>
+              <a href="contact.html">
+                <i class="fas fa-envelope"></i>
+                <span>Contact</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="dropdown">
+          <button
+            class="dropbtn"
+            aria-expanded="false"
+            aria-controls="dropdown-content"
+            id="menu-button"
+          >
+            <i class="fas fa-bars"></i>
+            <span>Menu</span>
+          </button>
+          <div class="dropdown-content" id="dropdown-content">
+            <a href="index.html" class="active">
+              <i class="fas fa-home"></i> Home
+            </a>
+            <a href="aboutus.html">
+              <i class="fas fa-info-circle"></i> About Us
+            </a>
+            <a href="services.html">
+              <i class="fas fa-recycle"></i> Services
+            </a>
+            <a href="products.html">
+              <i class="fas fa-shopping-bag"></i> Products
+            </a>
+            <a href="faq.html"> <i class="fas fa-question-circle"></i> FAQs </a>
+            <a href="contact.html"> <i class="fas fa-envelope"></i> Contact </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="right">
+        <a href="login.html" class="btn login-btn">
+          <i class="fas fa-sign-in-alt"></i>
+          <span>Login</span>
+        </a>
+        <a href="register.html" class="btn register-btn">
+          <i class="fas fa-user-plus"></i>
+          <span>Register</span>
+        </a>
+      </div>
+    </header>
+    <main class="container">
+      <!-- Product Content -->
+      <div class="product-content">
+        <!-- Product Gallery -->
+        <div class="product-gallery">
+          <div class="product-main-image">
+            <img src="/Images/LENOVOLAPTOP.jpeg" alt="Lenovo Laptop" />
+          </div>
+          <div class="product-thumbnails">
+            <div class="product-thumbnail active">
+              <img src="/api/placeholder/80/80" alt="Thumbnail 1" />
             </div>
-            <div class="product-info">
-                <h2>Product Name: Lenovo Laptop</h2>
-                <h3>Brand: Lenovo</h3>
-                <h4>Product Type: Laptop</h4>
-                <p><strong>Description:</strong> A high-performance laptop
-                    suitable for both work and play, featuring a sleek design
-                    and powerful specifications.</p>
-                <p><strong>Specifications:</strong></p>
-                <ul>
-                    <li>Processor: Intel Core i7</li>
-                    <li>RAM: 16GB</li>
-                    <li>Storage: 512GB SSD</li>
-                    <li>Display: 15.6" Full HD</li>
-                    <li>Operating System: Windows 10</li>
-                </ul>
-                <p><strong>Price: $799</strong></p>
-                <button class="btn">Add to Cart</button>
+            <div class="product-thumbnail">
+              <img src="/api/placeholder/80/80" alt="Thumbnail 2" />
             </div>
+            <div class="product-thumbnail">
+              <img src="/api/placeholder/80/80" alt="Thumbnail 3" />
+            </div>
+            <div class="product-thumbnail">
+              <img src="/api/placeholder/80/80" alt="Thumbnail 4" />
+            </div>
+          </div>
         </div>
 
-        <!-- Additional Product Information Section -->
-        <div class="product-additional-info">
-            <h3>Product Details</h3>
-            <p>This Lenovo Laptop offers outstanding performance, great
-                graphics, and a premium look. Ideal for professionals and
-                students alike. Enjoy fast processing speeds, smooth
-                multitasking, and ample storage for your needs.</p>
+        <!-- Product Info -->
+        <div class="product-info">
+          <span class="product-badge">Refurbished</span>
+          <h2>Lenovo ThinkPad X1 Carbon</h2>
+          <h3>Brand: Lenovo</h3>
+          <h4>Category: Laptop</h4>
+
+          <div class="product-description">
+            <p>
+              A high-performance laptop suitable for both work and play,
+              featuring a sleek design and powerful specifications. This Lenovo
+              ThinkPad X1 Carbon has been fully refurbished and tested to ensure
+              optimal performance.
+            </p>
+          </div>
+
+          <div class="product-specs">
+            <h4>Specifications</h4>
+            <ul class="specs-list">
+              <li>
+                <i class="fas fa-microchip"></i> Processor: Intel Core i7-10510U
+              </li>
+              <li><i class="fas fa-memory"></i> RAM: 16GB DDR4</li>
+              <li><i class="fas fa-hdd"></i> Storage: 512GB SSD</li>
+              <li><i class="fas fa-desktop"></i> Display: 15.6" Full HD IPS</li>
+              <li>
+                <i class="fas fa-battery-full"></i> Battery: Up to 12 hours
+              </li>
+              <li><i class="fas fa-weight"></i> Weight: 1.13 kg</li>
+            </ul>
+          </div>
+
+          <div class="product-price">
+            <div class="price-tag">
+              $799
+              <span class="original-price">$999</span>
+              <span class="discount-badge">-20%</span>
+            </div>
+          </div>
+
+          <div class="action-buttons">
+            <button class="action-button btn-primary">
+              <i class="fas fa-shopping-cart"></i> Add to Cart
+            </button>
+            <button class="action-button btn-outline">
+              <i class="fas fa-heart"></i> Add to Wishlist
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product Details Tabs -->
+      <div class="product-details-tabs">
+        <div class="tabs-header">
+          <div class="tab-item active" data-tab="details">Product Details</div>
+          <div class="tab-item" data-tab="reviews">Customer Reviews</div>
+          <div class="tab-item" data-tab="sustainability">Sustainability</div>
+        </div>
+
+        <div class="tab-content">
+          <!-- Details Tab -->
+          <div class="tab-panel active" id="details">
+            <h3>About This Product</h3>
+            <p>
+              This Lenovo ThinkPad X1 Carbon offers outstanding performance,
+              great graphics, and a premium look. Ideal for professionals and
+              students alike. Enjoy fast processing speeds, smooth multitasking,
+              and ample storage for your needs.
+            </p>
 
             <h4>Why Choose This Product?</h4>
-            <ul>
-                <li>High-performance Intel Core i7 processor</li>
-                <li>Impressive 16GB RAM for smooth multitasking</li>
-                <li>Storage options with SSD for faster access speeds</li>
-                <li>Sleek, lightweight design for portability</li>
-            </ul>
-        </div>
-
-        <!-- Product Reviews Section -->
-        <div class="product-reviews">
-            <h3>Customer Reviews</h3>
-            <div class="review">
-                <p><strong>John Doe:</strong>
-                    "This laptop is amazing! It handles everything I throw at it, and the battery lasts long."
-                    <span>Rating: ★★★★☆</span></p>
-            </div>
-            <div class="review">
-                <p><strong>Jane Smith:</strong>
-                    "Perfect for work and play. Highly recommend it!"
-                    <span>Rating: ★★★★★</span></p>
-            </div>
-
-            <h4>Write a Review</h4>
-            <textarea placeholder="Leave your review here"></textarea>
-            <button class="btn">Submit Review</button>
-        </div>
-
-        <!-- Footer Section -->
-        <footer>
-            <div class="footer">
-                <div class="footer-container">
-                    <div class="links">
-                        <a href="productview.html">index</a>
-                        <a href="aboutus.html">About Us</a>
-                        <a href="faq.html">FAQ's</a>
-                        <a href="contact.html">Contact</a>
-                    </div>
-
-                    <div class="subscription">
-                        <p>Get the latest updates. Subscribe with your
-                            email:</p>
-                        <div class="email-subscribe">
-                            <input type="email" placeholder="Enter your email">
-                            <button class="btn">Subscribe</button>
-                        </div>
-                    </div>
-
-                    <div class="social">
-                        <h3>Follow Us</h3>
-                        <div class="social-icons">
-                            <a href="https://facebook.com" target="_blank"><i
-                                    class="fa fa-facebook"></i></a>
-                            <a href="https://twitter.com" target="_blank"><i
-                                    class="fa fa-twitter"></i></a>
-                            <a href="https://instagram.com" target="_blank"><i
-                                    class="fa fa-instagram"></i></a>
-                            <a href="https://github.com" target="_blank"><i
-                                    class="fa fa-github"></i></a>
-                            <a href="https://linkedin.com" target="_blank"><i
-                                    class="fa fa-linkedin"></i></a>
-                        </div>
-                    </div>
+            <ul class="features-list">
+              <li>
+                <i class="fas fa-check-circle"></i>
+                <div>
+                  <strong>High Performance:</strong> Powered by an Intel Core i7
+                  processor, this laptop handles demanding tasks with ease.
                 </div>
+              </li>
+              <li>
+                <i class="fas fa-check-circle"></i>
+                <div>
+                  <strong>Premium Build Quality:</strong> Crafted with premium
+                  materials for durability and elegant look.
+                </div>
+              </li>
+              <li>
+                <i class="fas fa-check-circle"></i>
+                <div>
+                  <strong>All-Day Battery Life:</strong> With up to 12 hours of
+                  battery life, you can work or play all day without worrying
+                  about charging.
+                </div>
+              </li>
+              <li>
+                <i class="fas fa-check-circle"></i>
+                <div>
+                  <strong>Lightweight Design:</strong> At just 1.13 kg, this
+                  laptop is perfect for on-the-go professionals and students.
+                </div>
+              </li>
+              <li>
+                <i class="fas fa-check-circle"></i>
+                <div>
+                  <strong>Full Warranty:</strong> Comes with a 1-year warranty
+                  for peace of mind.
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Reviews Tab -->
+          <div class="tab-panel" id="reviews">
+            <h3>Customer Reviews</h3>
+            <div class="reviews-container">
+              <div class="review-item">
+                <div class="review-header">
+                  <span class="reviewer">John Doe</span>
+                  <span class="review-rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                  </span>
+                </div>
+                <p class="review-text">
+                  "This laptop is amazing! It handles everything I throw at it,
+                  and the battery lasts long. The build quality is exceptional,
+                  and the keyboard is comfortable for long typing sessions."
+                </p>
+                <p class="review-date">Posted on April 15, 2025</p>
+              </div>
+
+              <div class="review-item">
+                <div class="review-header">
+                  <span class="reviewer">Jane Smith</span>
+                  <span class="review-rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </span>
+                </div>
+                <p class="review-text">
+                  "Perfect for work and play. Highly recommend it! I've been
+                  using it for video editing and graphic design, and it performs
+                  flawlessly. The screen is bright and color-accurate."
+                </p>
+                <p class="review-date">Posted on April 10, 2025</p>
+              </div>
             </div>
-        </footer>
 
-    </body>
+            <div class="review-form">
+              <h4>Write a Review</h4>
+              <div class="star-rating">
+                <i class="far fa-star"></i>
+                <i class="far fa-star"></i>
+                <i class="far fa-star"></i>
+                <i class="far fa-star"></i>
+                <i class="far fa-star"></i>
+              </div>
+              <div class="form-row">
+                <label class="form-label" for="review-name">Your Name</label>
+                <input
+                  type="text"
+                  id="review-name"
+                  class="form-control"
+                  placeholder="Enter your name"
+                />
+              </div>
+              <div class="form-row">
+                <label class="form-label" for="review-text">Your Review</label>
+                <textarea
+                  id="review-text"
+                  class="form-control"
+                  rows="4"
+                  placeholder="Share your experience with this product"
+                ></textarea>
+              </div>
+              <button class="btn-primary">Submit Review</button>
+            </div>
+          </div>
 
+          <!-- Sustainability Tab -->
+          <div class="tab-panel" id="sustainability">
+            <h3>Environmental Impact</h3>
+            <p>
+              At Rethread, we're committed to reducing e-waste and promoting
+              sustainable technology consumption. By purchasing refurbished
+              electronics, you're making a positive impact on the environment.
+            </p>
+
+            <h4>Environmental Benefits of This Product</h4>
+            <ul class="features-list">
+              <li>
+                <i class="fas fa-leaf"></i>
+                <div>
+                  <strong>Reduced Carbon Footprint:</strong> By extending the
+                  life of this device, you're helping reduce the carbon
+                  emissions associated with manufacturing new electronics.
+                </div>
+              </li>
+              <li>
+                <i class="fas fa-recycle"></i>
+                <div>
+                  <strong>Less E-Waste:</strong> Each refurbished device means
+                  one less device in landfills, reducing toxic waste.
+                </div>
+              </li>
+              <li>
+                <i class="fas fa-bolt"></i>
+                <div>
+                  <strong>Energy Efficient:</strong> This model meets modern
+                  energy efficiency standards, consuming less power during
+                  operation.
+                </div>
+              </li>
+              <li>
+                <i class="fas fa-certificate"></i>
+                <div>
+                  <strong>Eco-Certified:</strong> Our refurbishment process
+                  follows environmentally friendly guidelines and standards.
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="footer-container">
+        <!-- Navigation Links -->
+        <div class="footer-links">
+          <div class="footer-section">
+            <h3>Quick Links</h3>
+            <ul>
+              <li>
+                <a href="index.html"><i class="fas fa-home"></i> Home</a>
+              </li>
+              <li>
+                <a href="aboutus.html"
+                  ><i class="fas fa-info-circle"></i> About Us</a
+                >
+              </li>
+              <li>
+                <a href="faq.html"
+                  ><i class="fas fa-question-circle"></i> FAQ's</a
+                >
+              </li>
+              <li>
+                <a href="contact.html"
+                  ><i class="fas fa-envelope"></i> Contact</a
+                >
+              </li>
+              <li>
+                <a href="products.html"
+                  ><i class="fas fa-shopping-bag"></i> Products</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Newsletter Section -->
+          <div class="footer-section">
+            <h3>Stay Updated</h3>
+            <p>Subscribe to our newsletter for the latest updates</p>
+            <div class="newsletter-form">
+              <input type="email" placeholder="Enter your email" required />
+              <button type="submit" class="submit-btn">
+                <i class="fas fa-paper-plane"></i> Subscribe
+              </button>
+            </div>
+          </div>
+
+          <!-- Social Media -->
+          <div class="footer-section">
+            <h3>Connect With Us</h3>
+            <div class="social-media">
+              <a
+                href="https://facebook.com"
+                target="_blank"
+                aria-label="Facebook"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a href="https://twitter.com" target="_blank" aria-label="Twitter"
+                ><i class="fab fa-twitter"></i
+              ></a>
+              <a
+                href="https://instagram.com"
+                target="_blank"
+                aria-label="Instagram"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a href="https://github.com" target="_blank" aria-label="GitHub"
+                ><i class="fab fa-github"></i
+              ></a>
+              <a
+                href="https://linkedin.com"
+                target="_blank"
+                aria-label="LinkedIn"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="footer-bottom">
+          <p>&copy; 2025 Rethread. All Rights Reserved.</p>
+        </div>
+      </div>
+    </footer>
+    <!-- Footer Section -->
+  </body>
 </html>

@@ -1,80 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rethread - Login to Your Account</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+    />
+    <link rel="stylesheet" href="login.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="icon" href="Images/logo.png" type="image/x-icon" />
+ 
+  </head>
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Rethread-your ewaste friend </title>
-        <link rel="stylesheet" href="login.css">
-        <link rel="stylesheet" href="navbar.css">
-        <link rel="icon" href="Images/logo.png" type="image/x-icon">
-    </head>
-
-    <body>
-        <header class="header">
-            <div class="left">
-                <img src="Images/logo.png" alt="logo"> 
-                
-            </div>
-            <div class="mid">
-                <ul class="navbar">
-                    <li><a href="index.html">HOME</a></li>
-                    <li><a href="aboutus.html">ABOUT US</a></li>
-                    <li><a href="faq.html">FAQs</a></li>
-                    <li><a href="contact.html">CONTACT US</a></li>
-                    <li><a href="sell.html">PRODUCT</a></li>
-                </ul>
-                <div class="dropdown">
-                    <button class="dropbtn">Main Menu</button>
-                    <div class="dropdown-content">
-                        <a href="index.html">HOME</a>
-                        <a href="aboutus.html">ABOUT US</a>
-                        <a href="faq.html">FAQs</a>
-                        <a href="contact.html">CONTACT US</a>
-                        <li><a href="sell.html">PRODUCT</a></li>
-                    </div>
-                </div>
-            </div>
-            <div class="right">
-                <button class="btn"><a
-                        href="login.html">Register/Login</a></button>
-            </div>
-        </header>
-        <div class="main">
-            <div class="sign-up">
-                <h2>Join Our Community</h2>
-
-                <form>
-                    <div class="form-group">
-                        <label for="name">Name:</label>
-                        <input type="text" id="name"
-                            placeholder="Enter your name" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="email">Email:</label>
-                        <input type="email" id="email"
-                            placeholder="Enter your email" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="phone">Phone:</label>
-                        <input type="tel" id="phone"
-                            placeholder="Enter your phone number" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="password">Password:</label>
-                        <input type="password" id="password"
-                            placeholder="Enter your password" required>
-                    </div>
-
-                    <div class="btn">
-                        <a href="login.html">Sign In</a>
-                    </div>
-                </form>
-            </div>
+  <body>
+    <div class="main">
+      <div class="login-container">
+        <div class="welcome-section">
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/3095/3095221.png"
+            alt="E-Waste Recycling"
+          />
+          <h1>Welcome Back!</h1>
+          <p>
+            Login to continue your e-waste recycling journey and track your
+            environmental impact.
+          </p>
+          <div class="features">
+            <p>
+              <i class="fas fa-check-circle"></i> Track your recycling history
+            </p>
+            <p><i class="fas fa-check-circle"></i> Access exclusive rewards</p>
+            <p><i class="fas fa-check-circle"></i> Manage your account</p>
+          </div>
         </div>
-    </body>
 
+        <div class="login-form">
+          <h2>Login to Your Account</h2>
+          <form>
+            <div class="form-group">
+              <label for="username">Username or Email</label>
+              <i class="fas fa-user"></i>
+              <input
+                type="text"
+                id="username"
+                placeholder="Enter your username or email"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="password">Password</label>
+              <i class="fas fa-lock"></i>
+              <input
+                type="password"
+                id="password"
+                placeholder="Enter your password"
+                required
+              />
+            </div>
+
+            <div class="remember-forgot">
+              <div class="remember-me">
+                <input type="checkbox" id="remember" name="remember" />
+                <label for="remember">Remember me</label>
+              </div>
+              <div class="forgot-password">
+                <a href="forgot-password.html">Forgot password?</a>
+              </div>
+            </div>
+
+            <button type="submit" class="btn">Login</button>
+
+            <div class="register-link">
+              Don't have an account? <a href="register.html">Sign Up</a>
+            </div>
+
+            <div class="social-login">
+              <p>Or login with</p>
+              <div class="social-icons">
+                <a href="#" class="social-icon facebook"
+                  ><i class="fab fa-facebook-f"></i
+                ></a>
+                <a href="#" class="social-icon google"
+                  ><i class="fab fa-google"></i
+                ></a>
+                <a href="#" class="social-icon twitter"
+                  ><i class="fab fa-twitter"></i
+                ></a>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
